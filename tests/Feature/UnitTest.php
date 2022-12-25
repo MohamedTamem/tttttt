@@ -3,11 +3,12 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class UnitTest extends TestCase
 {
-    /**
+      /**
      * A basic test example.
      *
      * @return void
@@ -31,7 +32,7 @@ class ExampleTest extends TestCase
 
     public function test_index_invoice()
     {
-        $response = $this->get('invoice');
+        $response = $this->get('/all-invoice');
 
         $response->assertStatus(200);
     }
